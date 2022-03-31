@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles.css";
 
-export function SimplyModal({ content, close }) {
-  const [open, setOpen] = useState(close);
+export function SimplyModal({ content, isOpen }) {
+  const [open, setOpen] = useState(isOpen);
 
   let containerModal = "containerModal";
 
