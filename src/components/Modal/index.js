@@ -3,6 +3,7 @@ import "../../styles.css";
 
 export function SimplyModal({ content, isOpen }) {
   const [open, setOpen] = useState(isOpen);
+  let modal;
 
   function closingModal() {
     setOpen(false);
