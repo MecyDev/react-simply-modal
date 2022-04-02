@@ -3,18 +3,18 @@ import "../../styles.css";
 
 export function SimplyModal({ content, isOpen }) {
   const [open, setOpen] = useState();
-  let containerModal = "containerModal close";
+  const [containerModal, setContainerModal] = "containerModal close";
 
   useEffect(() => {
     setOpen(isOpen);
   });
 
   if (open === true) {
-    containerModal = "containerModal";
+    setContainerModal("containerModal");
   }
 
   function closingModal() {
-    containerModal = "containerModal close";
+    setContainerModal("containerModal close");
   }
 
   return (
