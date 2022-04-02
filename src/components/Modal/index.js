@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles.css";
 
 export function SimplyModal({ content, isOpen }) {
-  const [open, setOpen] = useState(isOpen);
+  const [open, setOpen] = useState();
   let modal;
 
+  useEffect(() => {
+    setOpen(isOpen);
+  }, [isOpen]);
+
   function closingModal() {
-    setOpen(false);
+    isOpen = false;
   }
 
   if (open === true) {
