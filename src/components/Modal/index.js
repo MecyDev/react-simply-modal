@@ -10,7 +10,9 @@ export function SimplyModal({ content, isOpen }) {
   });
 
   function closingModal() {
-    setOpen(isOpen);
+    useEffect(() => {
+      setOpen(isOpen);
+    });
   }
 
   if (open === true) {
