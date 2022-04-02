@@ -18,7 +18,7 @@ export function SimplyModal({ content, isOpen }) {
   }
 
   return (
-    <div className="containerModal">
+    <div className={containerModal}>
       <div className="modal">
         <div className="modal__closeButton" onClick={closingModal}></div>
         <h2>{content}</h2>
