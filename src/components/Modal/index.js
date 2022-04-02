@@ -3,30 +3,28 @@ import "../../styles.css";
 
 export function SimplyModal({ content, isOpen }) {
   const [open, setOpen] = useState();
-  let modal;
+  let containerModal = "containerModal close";
 
   useEffect(() => {
     setOpen(isOpen);
-  }, [isOpen]);
-
-  function closingModal() {
-    isOpen = false;
-  }
+  });
 
   if (open === true) {
-    modal = (
-      <div className="containerModal">
-        <div className="modal">
-          <div className="modal__closeButton" onClick={closingModal}></div>
-          <h2>{content}</h2>
-        </div>
-      </div>
-    );
-  } else {
-    modal = null;
+    containerModal = "containerModal";
   }
 
-  return modal;
+  function closingModal() {
+    containerModal = "containerModal close";
+  }
+
+  return (
+    <div className="containerModal">
+      <div className="modal">
+        <div className="modal__closeButton" onClick={closingModal}></div>
+        <h2>{content}</h2>
+      </div>
+    </div>
+  );
 }
 
 export default SimplyModal;
