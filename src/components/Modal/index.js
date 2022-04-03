@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles.css";
 
-export function SimplyModal({ isOpen, visible, content }) {
+function SimplyModal({ isOpen, visible, content }) {
   let modal;
 
   if (isOpen === true) {
