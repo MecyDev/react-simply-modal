@@ -11,14 +11,18 @@ npm install --save react-simply-modal
 ## Usage
 
 ```jsx
-
-import MyComponent from "react-simply-modal";
+import { SimplyModal, useModal } from "react-simply-modal";
 
 export const Example = () => {
-  render() {
-    return <MyComponent content="sucess!" close={true}/>;
-  }
-}
+  const { isOpen, toggle } = useModal();
+
+  return (
+          <button onClick={toggle}>
+            Show the modal
+          </button>
+          <MyComponent isOpen={isOpen} visible={toggle} content="sucess!" />
+    );
+};
 ```
 
 ## License
