@@ -1,23 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../../styles.css";
 
-export function SimplyModal({ content, isOpen }) {
-  const [open, setOpen] = useState(isOpen);
+export function SimplyModal({ isOpen, visible, content }) {
   let modal;
 
-  /*useEffect(() => {
-    setOpen(isOpen);
-  });*/
-
-  function closingModal() {
-    setOpen(false);
-  }
-
-  if (open === true) {
+  if (isOpen === true) {
     modal = (
       <div className="containerModal">
         <div className="modal">
-          <div className="modal__closeButton" onClick={closingModal}></div>
+          <div className="modal__closeButton" onClick={visible}></div>
           <h2>{content}</h2>
         </div>
       </div>
