@@ -1,28 +1,17 @@
-import React, { useState, useEffect } from "react";
 import "../../styles.css";
 
 function SimplyModal({ isOpen, visible, content }) {
   let modal;
 
-  useEffect(() => {
-    const close = (e) => {
-      if (e.key === "Escape") {
-        visible;
-      }
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, []);
-
   if (isOpen === true) {
     modal = (
-      <div className="containerModal">
-        <div
-          className="modal"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="heading"
-        >
+      <div
+        className="containerModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="heading"
+      >
+        <div className="modal">
           <button
             type="button"
             className="modal__closeButton"
