@@ -19,7 +19,6 @@
   align-items: center;
   width: 25vw;
   height: 15vh;
-  background: white;
   border-radius: 5px;
   border: 2px solid grey;
 }
@@ -61,4 +60,8 @@
 
 .close {
   display: none;
+}
+
+#heading {
+  font-size: 1.15rem;
 }

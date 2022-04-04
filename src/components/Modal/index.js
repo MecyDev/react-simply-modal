@@ -6,10 +6,16 @@ function SimplyModal({ isOpen, visible, content }) {
 
   if (isOpen === true) {
     modal = (
-      <div className="containerModal">
+      <div
+        className="containerModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="heading"
+      >
         <div className="modal">
           <div className="modal__closeButton" onClick={visible}></div>
-          <h2>{content}</h2>
+          <h2 id="heading">{content}</h2>
+          <button>Fermer</button>
         </div>
       </div>
     );
