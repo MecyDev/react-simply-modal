@@ -13,9 +13,8 @@ function SimplyModal({ isOpen, visible, content }) {
           aria-modal="true"
           aria-labelledby="heading"
         >
-          <div className="modal__closeButton" onClick={(e) => visible(e)}></div>
+          <div className="modal__closeButton" onClick={visible}></div>
           <h2 id="heading">{content}</h2>
-          <button onClick={(e) => visible(e)}>Fermer</button>
         </div>
       </div>
     );
