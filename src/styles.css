@@ -33,6 +33,8 @@
   top: 5px;
   right: 5px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .modal__closeButton::before {
@@ -59,10 +61,16 @@
   transform: rotate(45deg);
 }
 
+.modal__closeButton:hover::before,
+.modal__closeButton:hover::after {
+  color: #ffb300;
+}
+
 .close {
   display: none;
 }
 
 #heading {
   font-size: 1.15rem;
+  margin-top: 0;
 }
