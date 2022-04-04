@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(78, 78, 78, 0.5);
+  background: rgba(31, 31, 31, 0.5);
   z-index: 10;
 }
 
@@ -19,6 +19,7 @@
   align-items: center;
   width: 25vw;
   height: 15vh;
+  background: #2b2b2b;
   border-radius: 5px;
   border: 2px solid grey;
 }
