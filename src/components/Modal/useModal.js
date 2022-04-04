@@ -3,7 +3,8 @@ import { useState } from "react";
 function useModal() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggle() {
+  function toggle(e) {
+    e.preventDefault();
     setIsOpen(!isOpen);
   }
 
