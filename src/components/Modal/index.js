@@ -7,7 +7,7 @@ function SimplyModal({ isOpen, visible, content }) {
   useEffect(() => {
     const close = (e) => {
       if (e.key === "Escape") {
-        toggle();
+        visible();
       }
     };
     window.addEventListener("keydown", close);
