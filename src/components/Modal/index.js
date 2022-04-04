@@ -7,7 +7,7 @@ function SimplyModal({ isOpen, visible, content }) {
   useEffect(() => {
     const close = (e) => {
       if (e.keyCode === 27) {
-        visible();
+        visible;
       }
     };
     window.addEventListener("keydown", close);

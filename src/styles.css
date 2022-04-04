@@ -35,6 +35,8 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .modal__closeButton::before {
@@ -63,11 +65,7 @@
 
 .modal__closeButton:hover::before,
 .modal__closeButton:hover::after {
-  color: #ffb300;
-}
-
-.close {
-  display: none;
+  background: #ffb300;
 }
 
 #heading {
