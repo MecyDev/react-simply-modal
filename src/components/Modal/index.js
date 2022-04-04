@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles.css";
 
 function SimplyModal({ isOpen, visible, content }) {
@@ -6,13 +6,13 @@ function SimplyModal({ isOpen, visible, content }) {
 
   if (isOpen === true) {
     modal = (
-      <div
-        className="containerModal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="heading"
-      >
-        <div className="modal">
+      <div className="containerModal">
+        <div
+          className="modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="heading"
+        >
           <button
             type="button"
             className="modal__closeButton"
