@@ -1,9 +1,14 @@
 import React from "react";
 import FocusTrap from "focus-trap-react";
+import useKeypress from "react-use-keypress";
 import "../../styles.css";
 
 function SimplyModal({ isOpen, visible, content }) {
   let modal;
+
+  useKeypress("Escape", () => {
+    visible;
+  });
 
   if (isOpen === true) {
     modal = (
