@@ -7,7 +7,7 @@ function SimplyModal({ isOpen, visible, content }) {
   let modal;
 
   useKeypress("Escape", () => {
-    visible;
+    visible();
   });
 
   if (isOpen === true) {
