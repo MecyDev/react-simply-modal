@@ -14,6 +14,14 @@ npm install --save react-simply-modal
 import { SimplyModal, useModal } from "react-simply-modal";
 
 /**
+ *
+ * This module use styled-components. You can import it for costumize the modal content.
+ *
+ * import styled from "styled-components"
+ *
+ **/
+
+/**
  * Optional customisation variables
  *
  * bgColor - [string] - Overlay color - only full hexa format ("#FFFFFF"), no use (#FFF).
@@ -23,9 +31,36 @@ import { SimplyModal, useModal } from "react-simply-modal";
  * bgCloseHvColor - [string] - Close button (cross) hover color.
  * borderColor - [string] - Modal border color.
  *
- * **/
+ **/
 
-const content = <h1 id="heading">Sucess!</h1> // id="heading" is for the modal aria-labelledby.
+/**
+ * Ex. with styled-component
+ *
+ * const Div = styled.div`
+ *  display: flex;
+ *  justify-content: center;
+ *  align-items: center;
+ * `;
+ *
+ * const H1 = styled.h1`
+ *  font-size: 2rem;
+ *  color: purple;
+ * `;
+ *
+ * const H2 = styled.h2`
+ *  font-size: 1.75rem;
+ *  color: green;
+ * `;
+ *
+ * const content  = (
+ *  <Div>
+ *    <H1>Hello</H1>
+ *    <H2>Hello</H2>
+ *  </Div>
+ * );
+ **/
+
+const content = <h1 id="heading">Success!</h1> // id="heading" is for the modal aria-labelledby.
 
 export const Example = () => {
   const { isOpen, toggle } = useModal();
