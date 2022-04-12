@@ -77,6 +77,7 @@ const Button = styled.button`
   }
   &:focus {
     outline: solid 1px red;
+    filter: none;
   }
 `;
 
