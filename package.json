@@ -1,7 +1,7 @@
 {
   "name": "react-simply-modal",
-  "version": "1.4.0",
-  "description": "A very simple modal component for React with focus trap on close cross and closing with Esc button.",
+  "version": "2.0.0",
+  "description": "A simple modal component for React, easily customisable with focus trap and closing with Esc button.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "scripts": {
@@ -33,7 +33,9 @@
     "focus-trap-react": "^8.9.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-use-keypress": "^1.3.0"
+    "react-use-keypress": "^1.3.0",
+    "styled-components": "^5.3.5",
+    "prop-types": "^15.8.1"
   },
   "repository": {
     "type": "git",
