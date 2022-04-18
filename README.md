@@ -15,7 +15,8 @@ import { SimplyModal, useModal } from "react-simply-modal";
 
 /**
  *
- * This module use styled-components. You can import it for costumize the modal content.
+ * This module use styled-components. You can import it for costumize
+ * the modal content.
  *
  * import styled from "styled-components"
  *
@@ -24,8 +25,10 @@ import { SimplyModal, useModal } from "react-simply-modal";
 /**
  * Optional customisation variables
  *
- * bgColor - [string] - Overlay color - only full hexa format ("#FFFFFF"), no use (#FFF).
- * bgColorOpacity - [string] - Overlay opacity - hexa format 00 (0) to FF (255). ex : "FF" (0% opacity), "80" (50% opacity) - defaut value 80.
+ * bgColor - [string] - Overlay color - only full hexa format ("#FFFFFF"),
+ * no use (#FFF).
+ * bgColorOpacity - [string] - Overlay opacity - hexa format 00 (0) to FF (255).
+ * ex : "FF" (0% opacity), "80" (50% opacity) - defaut value 80.
  * bgModalColor - [string] - Modal background color.
  * bgCloseColor - [string] - Close button (cross) color.
  * bgCloseHvColor - [string] - Close button (cross) hover color.
@@ -58,9 +61,12 @@ import { SimplyModal, useModal } from "react-simply-modal";
  *    <H2>Hello</H2>
  *  </Div>
  * );
+ *
+ * <SimplyModal isOpen={isOpen} visible={toggle} content={content} />
+ *
  **/
-
-const content = <h1 id="heading">Success!</h1> // id="heading" is for the modal aria-labelledby.
+//id="heading" is for the modal aria-labelledby
+const content = <h1 id="heading">Success!</h1>
 
 export const Example = () => {
   const { isOpen, toggle } = useModal();
@@ -69,8 +75,14 @@ export const Example = () => {
           <button onClick={toggle}>
             Show the modal
           </button>
-          <MyComponent isOpen={isOpen} visible={toggle} content="sucess!" bgColor="#808080" bgColorOpacity="30" bgCloseColor="#000" bgCloseHvColor="#FFF" />
-    );
+          <SimplyModal
+            isOpen={isOpen} visible={toggle}
+            content={content}
+            bgColor="#808080"
+            bgColorOpacity="30"
+            bgCloseColor="#000"
+            bgCloseHvColor="#FFF" />
+        );
 };
 ```
 
